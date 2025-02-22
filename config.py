@@ -13,7 +13,7 @@
 #   qute://help/configuring.html
 #   qute://help/settings.html
 
-#config.load_autoconfig(False)
+config.load_autoconfig(False)
 
 import catppuccin
 
