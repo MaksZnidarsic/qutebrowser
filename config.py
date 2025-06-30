@@ -23,16 +23,12 @@ catppuccin.setup(c, 'mocha', True)
 
 c.content.private_browsing = True
 c.content.blocking.hosts.lists = ['https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts']
+
 c.content.local_content_can_access_remote_urls = True
-config.set('content.images', True, 'chrome-devtools://*')
-config.set('content.images', True, 'devtools://*')
-config.set('content.javascript.enabled', True, 'chrome-devtools://*')
-config.set('content.javascript.enabled', True, 'devtools://*')
-config.set('content.javascript.enabled', True, 'chrome://*/*')
-config.set('content.javascript.enabled', True, 'qute://*/*')
+c.content.javascript.can_open_tabs_automatically = False
 
 c.completion.height = '30%'
-c.completion.scrollbar.padding = 2
+c.completion.scrollbar.padding = 1
 c.completion.min_chars = 1
 c.completion.open_categories = ['searchengines', 'quickmarks', 'bookmarks', 'filesystem']
 
@@ -42,24 +38,21 @@ c.downloads.remove_finished = 1000
 
 c.prompt.filebrowser = True
 
-c.tabs.position = 'left'
 c.tabs.show = 'never'
-c.tabs.show_switching_delay = 500
-c.tabs.width = 300
-c.tabs.wrap = True
+#c.tabs.position = 'left'
+#c.tabs.show_switching_delay = 500
+#c.tabs.width = 300
+#c.tabs.wrap = True
 
 c.url.default_page = 'about:blank'
 c.url.start_pages = 'about:blank'
 c.url.searchengines = {
     'DEFAULT': 'https://duckduckgo.com/?q={}', 
-    'g': 'https://www.google.com/search?hl=en&q={}', 
-    'y': 'https://yandex.com/?q={}',
 
-    'w': 'https://wikipedia.org/wiki/{}', 
-    'wd': 'https://wikipedia.org/wiki/{}_(disambiguation)', 
-    'wi': 'https://wiktionary.org/wiki/{}', 
-    'wa': 'https://wiki.archlinux.org/?search={}', 
-    'wp' : 'https://proofwiki.org/wiki/{}',
+    's': 'https://startpage.com/do/search?q={}',
+    'w': 'https://wikipedia.org/wiki/?search={}', 
+    'wi': 'https://fr.wiktionary.org/wiki/?search={}',
+    'wp': 'https://proofwiki.org/w/?search={}'
 }
 
 c.downloads.location.directory = '$HOME/downloads'
