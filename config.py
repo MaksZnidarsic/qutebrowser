@@ -23,14 +23,14 @@ c.colors.webpage.darkmode.enabled = True
 catppuccin.setup(c, 'mocha', True)
 
 c.content.private_browsing = True
-c.content.blocking.hosts.lists = ['https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts']
+c.content.blocking.hosts.lists = [ 'https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts' ]
 c.content.local_content_can_access_remote_urls = True
 c.content.javascript.can_open_tabs_automatically = False
 
 c.completion.height = '30%'
 c.completion.scrollbar.padding = 1
 c.completion.min_chars = 1
-c.completion.open_categories = ['searchengines', 'quickmarks', 'bookmarks', 'filesystem']
+c.completion.open_categories = [ 'searchengines', 'quickmarks', 'bookmarks', 'filesystem' ]
 
 c.downloads.position = 'top'
 c.downloads.prevent_mixed_content = True
