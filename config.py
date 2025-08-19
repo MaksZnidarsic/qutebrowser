@@ -13,6 +13,7 @@
 #   qute://help/configuring.html
 #   qute://help/settings.html
 
+
 config.load_autoconfig(False)
 
 import catppuccin
@@ -23,7 +24,6 @@ catppuccin.setup(c, 'mocha', True)
 
 c.content.private_browsing = True
 c.content.blocking.hosts.lists = ['https://raw.githubusercontent.com/StevenBlack/hosts/master/hosts']
-
 c.content.local_content_can_access_remote_urls = True
 c.content.javascript.can_open_tabs_automatically = False
 
@@ -34,25 +34,22 @@ c.completion.open_categories = ['searchengines', 'quickmarks', 'bookmarks', 'fil
 
 c.downloads.position = 'top'
 c.downloads.prevent_mixed_content = True
-c.downloads.remove_finished = 1000
+c.downloads.remove_finished = 0
+c.downloads.location.directory = '$HOME/downloads'
 
 c.prompt.filebrowser = True
-
 c.tabs.show = 'never'
-#c.tabs.position = 'left'
-#c.tabs.show_switching_delay = 500
-#c.tabs.width = 300
-#c.tabs.wrap = True
 
 c.url.default_page = 'about:blank'
 c.url.start_pages = 'about:blank'
 c.url.searchengines = {
-    'DEFAULT': 'https://duckduckgo.com/?q={}', 
+    'DEFAULT' : 'https://duckduckgo.com/?kl=fr-fr&q={}',
 
-    's': 'https://startpage.com/do/search?q={}',
-    'w': 'https://wikipedia.org/wiki/?search={}', 
-    'wi': 'https://fr.wiktionary.org/wiki/?search={}',
-    'wp': 'https://proofwiki.org/w/?search={}'
+    'f' : 'https://fran.si/iskanje?Query={}',
+    'fr' : 'https://franja.si/iskanje?q={}',
+    'w' : 'https://fr.wikipedia.org/wiki/?search={}',
+    'wi' : 'https://fr.wiktionary.org/wiki/?search={}',
+    's' : 'https://startpage.com/do/search?q={}',
 }
 
-c.downloads.location.directory = '$HOME/downloads'
+config.bind('<Escape>', 'mode-leave ;; jseval -q document.activeElement.blur()', mode = 'insert')
