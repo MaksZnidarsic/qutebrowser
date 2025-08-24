@@ -12,12 +12,13 @@
 // @run-at          document-end
 // @grant           none
 // @include         http*
+// @exclude         https://www.youtube*
 // @require         https://cdn.jsdelivr.net/npm/darkreader/darkreader.min.js
 // @noframes
 // ==UserScript==
 
 DarkReader.enable({
-    brightness : 30,
+    brightness : 10,
     contrast : 100,
-    sepia : 0,
+    sepia : 50,
 })
