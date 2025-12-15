@@ -12,7 +12,8 @@
 // @run-at          document-end
 // @grant           none
 // @include         http*
-// @exclude         https://www.youtube*
+// @exclude         *://www.youtube*
+// @exclude         *://github.com*
 // @require         https://cdn.jsdelivr.net/npm/darkreader/darkreader.min.js
 // @noframes
 // ==UserScript==

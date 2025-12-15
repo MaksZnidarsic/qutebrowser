@@ -1,0 +1,5 @@
+#!/bin/bash
+
+if [ "${QUTE_URL:0:29}" = "https://www.youtube.com/watch" ]; then
+    echo "open https://www.youtube-nocookie.com/embed/${QUTE_URL:32:11}" >> "$QUTE_FIFO";
+fi

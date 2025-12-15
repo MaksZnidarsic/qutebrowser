@@ -40,6 +40,16 @@ c.downloads.location.directory = '$HOME/downloads'
 c.prompt.filebrowser = True
 c.tabs.show = 'never'
 
+c.hints.chars = 'asdfjkl' 
+c.hints.find_implementation = 'javascript'
+c.hints.radius = 1
+c.hints.uppercase = True
+c.hints.padding['left'] = 1
+c.hints.padding['right'] = 1
+c.hints.border = '0px'
+c.colors.hints.bg = '#181825'
+c.colors.hints.fg = '#ffffff'
+
 c.url.default_page = 'about:blank'
 c.url.start_pages = 'about:blank'
 c.url.searchengines = {
@@ -47,9 +57,18 @@ c.url.searchengines = {
 
     'f' : 'https://fran.si/iskanje?Query={}',
     'fr' : 'https://franja.si/iskanje?q={}',
+    'm' : 'https://www.openstreetmap.org/search?query={}',
+    's' : 'https://startpage.com/sp/search?q={}',
+
     'w' : 'https://fr.wikipedia.org/wiki/?search={}',
+    'w.e' : 'https://en.wikipedia.org/wiki/?search={}',
+
     'wi' : 'https://fr.wiktionary.org/wiki/?search={}',
-    's' : 'https://startpage.com/do/search?q={}',
+    'wi.e' : 'https://en.wiktionary.org/wiki/?search={}',
+
+    'se.m' : 'https://math.stackexchange.com/search?q={}',
+    'se.f' : 'https://french.stackexchange.com/search?q={}'
 }
 
 config.bind('<Escape>', 'mode-leave ;; jseval -q document.activeElement.blur()', mode = 'insert')
+config.bind('<Ctrl-u>', 'spawn --userscript youtube-redirect', mode = 'normal')
