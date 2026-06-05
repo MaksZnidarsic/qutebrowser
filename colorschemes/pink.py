@@ -4,8 +4,8 @@
 def setup(c):
 
     colors = {
-        'base' : '#100b12',
-        'base-light' : '#171019',
+        'base' : '#000000',
+        'base-light' : '#090a0b',
         'text' : '#ffffff',
     
         'pink' : '#ffc5d3',
@@ -25,9 +25,9 @@ def setup(c):
     c.colors.completion.odd.bg = colors['base-light']
     c.colors.completion.fg = colors['text']
 
-    c.colors.completion.item.selected.bg = colors['pink']
-    c.colors.completion.item.selected.border.bottom = colors['pink']
-    c.colors.completion.item.selected.border.top = colors['pink']
+    c.colors.completion.item.selected.bg = colors['text']
+    c.colors.completion.item.selected.border.bottom = colors['text']
+    c.colors.completion.item.selected.border.top = colors['text']
     c.colors.completion.item.selected.fg = colors['base']
     c.colors.completion.item.selected.match.fg = colors['pink-dark']
     c.colors.completion.match.fg = colors['pink-dark']
@@ -36,22 +36,35 @@ def setup(c):
     c.colors.completion.scrollbar.fg = colors['base-light']
 
 
-    c.colors.downloads.bar.bg = colors['base']
-    c.colors.downloads.error.bg = colors['base']
-    c.colors.downloads.start.bg = colors['base']
-    c.colors.downloads.stop.bg = colors['base']
+    c.colors.contextmenu.menu.bg = colors['base']
+    c.colors.contextmenu.menu.fg = colors['text']
 
+    c.colors.contextmenu.disabled.bg = colors['base']
+    c.colors.contextmenu.disabled.fg = colors['pink']
+
+    c.colors.contextmenu.selected.bg = colors['base']
+    c.colors.contextmenu.selected.fg = colors['pink-dark']
+
+
+    c.colors.downloads.bar.bg = colors['base']
+
+    c.colors.downloads.error.bg = colors['base']
     c.colors.downloads.error.fg = colors['red']
+    c.colors.downloads.start.bg = colors['base']
     c.colors.downloads.start.fg = colors['text']
+    c.colors.downloads.stop.bg = colors['base']
     c.colors.downloads.stop.fg = colors['pink-dark']
+
     c.colors.downloads.system.fg = 'none'
     c.colors.downloads.system.bg = 'none'
 
+
     c.colors.hints.bg = colors['base']
     c.colors.hints.fg = colors['text']
-
-    c.hints.border = '0px'
     c.colors.hints.match.fg = colors['pink-dark']
+    c.hints.border = '0px'
+
+
     c.colors.keyhint.bg = colors['base']
     c.colors.keyhint.fg = colors['text']
     c.colors.keyhint.suffix.fg = colors['pink-dark']
@@ -70,6 +83,14 @@ def setup(c):
     c.colors.messages.warning.fg = colors['yellow']
 
 
+    c.colors.prompts.bg = colors['base']
+    c.colors.prompts.border = colors['base']
+    c.colors.prompts.fg = colors['text']
+
+    c.colors.prompts.selected.bg = colors['text']
+    c.colors.prompts.selected.fg = colors['base']
+
+
     c.colors.statusbar.normal.bg = colors['base']
     c.colors.statusbar.normal.fg = colors['text']
 
@@ -85,8 +106,8 @@ def setup(c):
     c.colors.statusbar.passthrough.fg = colors['text']
 
     c.colors.statusbar.caret.bg = colors['base']
-    c.colors.statusbar.caret.selection.bg = colors['base']
     c.colors.statusbar.caret.fg = colors['text']
+    c.colors.statusbar.caret.selection.bg = colors['base']
     c.colors.statusbar.caret.selection.fg = colors['pink-dark']
 
     c.colors.statusbar.url.error.fg = colors['red']
@@ -110,22 +131,18 @@ def setup(c):
     c.colors.tabs.even.bg = colors['base']
     c.colors.tabs.even.fg = colors['text']
 
-    c.colors.tabs.selected.odd.bg = colors['pink']
+    c.colors.tabs.selected.odd.bg = colors['text']
     c.colors.tabs.selected.odd.fg = colors['base']
 
-    c.colors.tabs.selected.even.bg = colors['pink']
+    c.colors.tabs.selected.even.bg = colors['text']
     c.colors.tabs.selected.even.fg = colors['base']
 
     c.colors.tabs.indicator.error = colors['red']
     c.colors.tabs.indicator.system = 'none'
 
-    c.colors.contextmenu.menu.bg = colors['base']
-    c.colors.contextmenu.menu.fg = colors['text']
 
-    c.colors.contextmenu.disabled.bg = colors['base']
-    c.colors.contextmenu.disabled.fg = colors['pink']
+    c.colors.tooltip.bg = colors['base']
+    c.colors.tooltip.fg = colors['text']
 
-    c.colors.contextmenu.selected.bg = colors['base']
-    c.colors.contextmenu.selected.fg = colors['pink-dark']
 
-    c.colors.webpage.bg = colors['base']
+    c.colors.webpage.bg = '#000000'

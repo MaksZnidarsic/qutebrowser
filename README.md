@@ -1,7 +1,10 @@
+
+
+
 # Qutebrowser
 
-My config for [Qutebrowser](https://qutebrowser.org).
+My [Qutebrowser](https://qutebrowser.org) config.
 
 ```
-    pacman -Syu qutebrowser python-adblock
+    qutebrowser python-adblock
 ```
