@@ -1,6 +1,9 @@
 
 
 
+#TODO still has local storage. gotta be cleared through indexeddb js interface ugh
+
+
 function element_of() {
     name=$1[@]
     array=("${!name}")
@@ -26,7 +29,7 @@ for x in $cache_path/*; do
 done
 
 
-keep_webengine=( IndexedDB "Local Storage" Cookies )
+keep_webengine=( IndexedDB "Local Storage" "Local Storage-state" Cookies )
 for x in $cache_path/webengine/*; do
     u="$(basename "$x")"
     if element_of keep_webengine "$u"; then
@@ -37,10 +40,10 @@ for x in $cache_path/webengine/*; do
 done
 
 
-keep_indexeddb=https_web.whatsapp.com_0.indexeddb.leveldb
+keep_indexeddb=( https_web.whatsapp.com_0.indexeddb.leveldb )
 for x in $cache_path/webengine/IndexedDB/*; do
     u="$(basename $x)"
-    if [ "$u" == $keep_indexeddb ]; then
+    if element_of keep_indexeddb "$u"; then
         continue
     fi
     echo "$x"

@@ -26,7 +26,7 @@ pink.setup(c)
 c.fonts.default_family = 'UbuntuMono Nerd Font'
 
 
-#c.content.private_browsing = True
+c.content.private_browsing = True
 
 c.content.javascript.can_open_tabs_automatically = False
 c.content.local_content_can_access_remote_urls = True
@@ -92,6 +92,8 @@ c.url.searchengines = {
     'fr' : 'https://franja.si/iskanje?q={}',
 
     'm' : 'https://www.openstreetmap.org/search?query={}',
+
+    's' : 'https://www.startpage.com/do/search?query={}',
 
     'w' : 'https://en.wikipedia.org/wiki/?search={}',
     'w.f' : 'https://fr.wikipedia.org/wiki/?search={}',

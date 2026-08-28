@@ -2,7 +2,12 @@
 
 
 
-cache=$HOME/.local/share/qutebrowser/cleaning
+#
+# NOT IN USE
+# keeping for later if needed
+#
+# HOW TO: run simultaneously w/ qutebrowser to clean cache after closing, closes itself when qutebrowser does
+#
 
 
 function date_time() {
@@ -15,16 +20,15 @@ if pidof -x "$script_name" -o $$ >/dev/null; then
     exit
 fi
 
-echo "$(date_time) started qutebrowser" >> $cache
-echo run
-
-
 while [ 1 ]; do
     if ! pidof -x "qutebrowser" >/dev/null; then
         break
     fi
     sleep 1
 done
+
+
+cache=$HOME/.local/share/qutebrowser/cleaning
 
 $HOME/.config/qutebrowser/clean-up/clean-cookies.sh
 echo "[$(date_time)] cleaned" >> $cache
