@@ -22,8 +22,11 @@ from colorschemes import pink
 c.colors.webpage.darkmode.enabled = True
 pink.setup(c)
 
+c.zoom.default = 125;
+
 
 c.fonts.default_family = 'UbuntuMono Nerd Font'
+c.fonts.default_size = '14pt'
 
 
 c.content.private_browsing = True
